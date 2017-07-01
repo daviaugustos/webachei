@@ -627,14 +627,51 @@ label.control-label{
 
 /*-- Banners --*/
 .list-banner{
-  width: 880px;
+    width: 920px;
 }
 .card-banner{
+    display: inline-block;
+}
+
+.row-img-banner{
   display: inline-block;
 }
+.row-button-add{
+  vertical-align: top;
+}
+.card-banner-img{
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    height: 150px; /*-6px descontar difereça do button-add*/
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    /*margin-bottom: 0.5rem;*/
+}
+.card-banner-img > * > img {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: inherit;
+    margin: 0 auto;
+    transition: all .5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+a img {
+    vertical-align: middle !important;
+    border: none;
+}
+
 .button-add{
     background: transparent;
-    width: 150px;
+    width: 170px;
+    height: 150px;
     border-color: #c658e0;
     text-align: center;
     border-radius: 8px;
@@ -642,18 +679,10 @@ label.control-label{
     font-size: 65px;
     color: #c658e0;
     border-style: dashed;
-    height: 130px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 .button-add:hover{
-  background-color: #f3f3f3;
+    background-color: #f3f3f3;
 }
-
-
 
 /*-- Footer --*/
 footer ul li a{
@@ -663,30 +692,30 @@ footer ul li a{
 footer p{
   margin: 0;
   padding-top: 15px;
-  font-weight: 400
+  font-weight: 400;
 }
 
 /*-- Media Screens --*/
 
 /*Media Screens nos Banners*/
-@media only screen and (min-width : 1310px){
+@media only screen and (min-width : 1383px){
     .list-banner{
-      width: 1100px;
+      width: 1140px;
     }
 }
-@media only screen and (max-width : 1094px){
+@media only screen and (max-width : 1188px){
     .list-banner{
-      width: 660px;
+      width: 700px;
     }
 }
-@media only screen and (max-width : 639px){
+@media only screen and (max-width : 679px){
     .list-banner{
-      width: 440px;
+      width: 480px;
     }
 }
-@media only screen and (max-width : 447px){
+@media only screen and (max-width : 487px){
     .list-banner{
-      width: 220px;
+      width: 260px;
     }
 }
 
@@ -709,6 +738,12 @@ footer p{
       height: 170px;
     }
 }
+
+/*@media only screen and (max-width : 480px) {
+    #anuncios .img-anuncio{
+      height: 250px;
+    }
+}*/
 
 @media only screen and (max-width : 500px) {
     .col-xx-12{
@@ -737,8 +772,3 @@ footer p{
     }
 }
 
-@media only screen and (max-width : 480px) {
-    #anuncios .img-anuncio{
-      height: 250px;
-    }
-}

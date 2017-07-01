@@ -80,29 +80,73 @@
 								<div class="container">
 
 									<div class="list-banner row padding-top-20" class="card-content table-responsive">
-										<div class="card-banner padding-20">
-											<button class="button-add">+</button>
+										
+										<div class="padding-20 row-img-banner">
+											<div class="card-banner-img">
+												<span style="
+													background: #34ceb2;
+													z-index: 99999;
+													top: 20px;
+													left: 5px;
+													border-radius: 100%;
+													font-size: 16px;
+													color: #ffffff;
+													transform: rotate(60deg);
+													font-weight: 700;
+													-webkit-text-fill-color: #ffffff;
+													margin-top: 100px;
+													position: relative;
+													padding-top: 10px;
+													padding-left: 15px;
+													padding-right: 15px;
+													padding-bottom: 10px;
+													">
+													2
+												</span>
+												<a href="">
+													<img src="../assets/img/examples/city.jpg" alt="">
+												</a>
+											</div>
 										</div>
 
-										<div class="card-banner padding-20">
-											<button class="button-add">+</button>
+										<div class="padding-20 row-img-banner">
+											<div class="card-banner-img">
+												<a href="">
+													<img src="../assets/img/examples/city.jpg" alt="">
+												</a>
+											</div>
 										</div>
 
-										<div class="card-banner padding-20">
-											<button class="button-add">+</button>
+										<div class="padding-20 row-img-banner">
+											<div class="card-banner-img">
+												<a href="">
+													<img src="../assets/img/examples/city.jpg" alt="">
+												</a>
+											</div>
 										</div>
 
-										<div class="card-banner padding-20">
-											<button class="button-add">+</button>
+										<div class="padding-20 row-img-banner">
+											<div class="card-banner-img">
+												<a href="">
+													<img src="../assets/img/examples/city.jpg" alt="">
+												</a>
+											</div>
 										</div>
-
-										<div class="card-banner padding-20">
+										<div class="padding-20 row-img-banner">
+											<div class="card-banner-img">
+												<a href="">
+													<img src="../assets/img/examples/city.jpg" alt="">
+												</a>
+											</div>
+										</div>
+										
+										<div class="card-banner row-button-add padding-20">
 											<button class="button-add">+</button>
 										</div>
 		                            </div>
 
 								</div>
-	                            
+
 	                        </div>
 							
 	                    </div>
