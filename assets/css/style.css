@@ -625,6 +625,34 @@ label.control-label{
   vertical-align: text-bottom;
 }
 
+/*-- Banners --*/
+.list-banner{
+  width: 880px;
+}
+.card-banner{
+  display: inline-block;
+}
+.button-add{
+    background: transparent;
+    width: 150px;
+    border-color: #c658e0;
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 65px;
+    color: #c658e0;
+    border-style: dashed;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.button-add:hover{
+  background-color: #f3f3f3;
+}
+
 
 
 /*-- Footer --*/
@@ -640,7 +668,30 @@ footer p{
 
 /*-- Media Screens --*/
 
+/*Media Screens nos Banners*/
+@media only screen and (min-width : 1310px){
+    .list-banner{
+      width: 1100px;
+    }
+}
+@media only screen and (max-width : 1094px){
+    .list-banner{
+      width: 660px;
+    }
+}
+@media only screen and (max-width : 639px){
+    .list-banner{
+      width: 440px;
+    }
+}
+@media only screen and (max-width : 447px){
+    .list-banner{
+      width: 220px;
+    }
+}
 
+
+/*Media Screens Gerais*/
 @media only screen and (max-width : 991px) {
     #detalhes .descricao-empresa{
       text-align: left;
