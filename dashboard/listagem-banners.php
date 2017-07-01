@@ -39,7 +39,7 @@
 					</li>
 					<li class="active">
 						<a href="listagem-banners.php">
-							<i class="material-icons">library_books</i>
+							<i class="material-icons">collections</i>
 							<p>Banners</p>
 						</a>
 					</li>
@@ -83,25 +83,11 @@
 										
 										<div class="padding-20 row-img-banner">
 											<div class="card-banner-img">
-												<span style="
-													background: #34ceb2;
-													z-index: 99999;
-													top: 20px;
-													left: 5px;
-													border-radius: 100%;
-													font-size: 16px;
-													color: #ffffff;
-													transform: rotate(60deg);
-													font-weight: 700;
-													-webkit-text-fill-color: #ffffff;
-													margin-top: 100px;
-													position: relative;
-													padding-top: 10px;
-													padding-left: 15px;
-													padding-right: 15px;
-													padding-bottom: 10px;
-													">
-													2
+												<span class="banner edit">
+													<i class="material-icons">mode_edit</i>
+												</span>
+												<span class="banner delete">
+													<i class="material-icons">delete</i>
 												</span>
 												<a href="">
 													<img src="../assets/img/examples/city.jpg" alt="">
@@ -111,29 +97,12 @@
 
 										<div class="padding-20 row-img-banner">
 											<div class="card-banner-img">
-												<a href="">
-													<img src="../assets/img/examples/city.jpg" alt="">
-												</a>
-											</div>
-										</div>
-
-										<div class="padding-20 row-img-banner">
-											<div class="card-banner-img">
-												<a href="">
-													<img src="../assets/img/examples/city.jpg" alt="">
-												</a>
-											</div>
-										</div>
-
-										<div class="padding-20 row-img-banner">
-											<div class="card-banner-img">
-												<a href="">
-													<img src="../assets/img/examples/city.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="padding-20 row-img-banner">
-											<div class="card-banner-img">
+												<span class="banner edit">
+													<i class="material-icons">mode_edit</i>
+												</span>
+												<span class="banner delete">
+													<i class="material-icons">delete</i>
+												</span>
 												<a href="">
 													<img src="../assets/img/examples/city.jpg" alt="">
 												</a>

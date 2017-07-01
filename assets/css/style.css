@@ -632,7 +632,6 @@ label.control-label{
 .card-banner{
     display: inline-block;
 }
-
 .row-img-banner{
   display: inline-block;
 }
@@ -643,11 +642,10 @@ label.control-label{
     display: inline-block;
     position: relative;
     width: 170px;
-    height: 150px; /*-6px descontar difereça do button-add*/
+    height: 150px;
     overflow: hidden;
     cursor: pointer;
     background: #000;
-    /*margin-bottom: 0.5rem;*/
 }
 .card-banner-img > * > img {
     position: absolute;
@@ -667,6 +665,9 @@ a img {
     vertical-align: middle !important;
     border: none;
 }
+.card-banner-img:hover span.banner{
+    display: inline;
+}
 
 .button-add{
     background: transparent;
@@ -683,6 +684,31 @@ a img {
 .button-add:hover{
     background-color: #f3f3f3;
 }
+
+span.banner{
+    display: none;
+    z-index: 4;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    -webkit-text-fill-color: #ffffff;
+    position: absolute;
+    padding: 5px;
+}
+
+span.banner.edit{
+    background: rgba(52, 206, 178, 0.7);
+}
+span.banner.edit:hover{
+    background: rgb(52, 206, 178);
+}
+span.banner.delete{
+    right: 0;
+    background: rgba(244, 67, 54, 0.68);
+}
+span.banner.delete:hover{
+    background: rgb(244, 67, 54);
+}  
 
 /*-- Footer --*/
 footer ul li a{

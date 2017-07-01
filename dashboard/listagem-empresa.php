@@ -37,6 +37,12 @@
 							<p>Listagem de empresas</p>
 						</a>
 					</li>
+					<li>
+						<a href="listagem-banners.php">
+							<i class="material-icons">collections</i>
+							<p>Banners</p>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
