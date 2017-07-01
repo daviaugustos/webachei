@@ -110,7 +110,9 @@
 										</div>
 										
 										<div class="card-banner row-button-add padding-20">
-											<button class="button-add">+</button>
+											<a href="cadastra-banner.php">
+												<button class="button-add">+</button>
+											</a>
 										</div>
 		                            </div>
 
