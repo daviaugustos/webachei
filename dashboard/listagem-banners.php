@@ -4,7 +4,7 @@
 	include "../includes/logica-usuario.php";
 	verificaUsuario();
 	include "includes/header.php";
-	// include "empresa/lista-banners.php";
+	include "banner/lista-banner.php";
 ?>
 <body>
 
@@ -79,36 +79,29 @@
 
 								<div class="container">
 
+									
 									<div class="list-banner row padding-top-20" class="card-content table-responsive">
 										
-										<div class="padding-20 row-img-banner">
-											<div class="card-banner-img">
-												<span class="banner edit">
-													<i class="material-icons">mode_edit</i>
-												</span>
-												<span class="banner delete">
-													<i class="material-icons">delete</i>
-												</span>
-												<a href="">
-													<img src="../assets/img/examples/city.jpg" alt="">
-												</a>
+										<?php
+											foreach ($banners as $banner):
+										?>
+											<div class="padding-20 row-img-banner">
+												<div class="card-banner-img">
+													<span class="banner edit">
+														<i class="material-icons">mode_edit</i>
+													</span>
+													<span class="banner delete">
+														<i class="material-icons">delete</i>
+													</span>
+													<a href="">
+														<img src="../imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
+													</a>
+												</div>
 											</div>
-										</div>
+										<?php
+											endforeach;
+										?>
 
-										<div class="padding-20 row-img-banner">
-											<div class="card-banner-img">
-												<span class="banner edit">
-													<i class="material-icons">mode_edit</i>
-												</span>
-												<span class="banner delete">
-													<i class="material-icons">delete</i>
-												</span>
-												<a href="">
-													<img src="../assets/img/examples/city.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										
 										<div class="card-banner row-button-add padding-20">
 											<a href="cadastra-banner.php">
 												<button class="button-add">+</button>

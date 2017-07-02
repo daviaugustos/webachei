@@ -1,6 +1,7 @@
 <?php 
 
-    include "..\Empresa\Imagem.php";  
+    include ($_SERVER["DOCUMENT_ROOT"] . '/webachei/dashboard/empresa/Imagem.php');
+
     class Banner Extends Imagem{
             public $empresaIdFk;
             public $linkCampanha;
@@ -54,15 +55,11 @@
             }
             
 
-            public function listaEmpresa($idEmpresa){
+            public function listaBanner($idEmpresa){
                 $query = "SELECT *
-                          FROM empresa as e
-                          INNER JOIN empresaContato as ec
-                          on e.empresaId = ec.empresaIdFk 
-                          INNER JOIN empresaEndereco as ee
-                          on e.empresaId = ee.empresaIdFk
-                          INNER JOIN imagemEmpresa as ie
-                          on e.empresaId = ie.empresaIdFk 
+                          FROM banner as b
+                          INNER JOIN empresa as e
+                          on e.empresaId = b.empresaIdFk 
                           WHERE empresaId = :empresaId";
 
                 $statement = $this->conexao->prepare($query);
@@ -72,86 +69,30 @@
                 return $results;
             }
 
-            public function listaEmpresas(){
+            public function listaBanners(){
                 $query = "SELECT *
-                          FROM empresa as e
-                          INNER JOIN empresaContato as ec
-                          on e.empresaId = ec.empresaIdFk 
-                          INNER JOIN empresaEndereco as ee
-                          on e.empresaId = ee.empresaIdFk
-                          INNER JOIN imagemEmpresa as ie
-                          on e.empresaId = ie.empresaIdFk";
+                          FROM banner as b
+                          INNER JOIN empresa as e
+                          on e.empresaId = b.empresaIdFk
+                          order by b.posicaoSlide";
 
                 $statement = $this->conexao->prepare($query);
                 $statement->execute();
                 
                 $results = $statement->fetchAll();
                 return $results;
-            } 
-            
-            public function listaEmpresasAtivas(){
-                $query = "SELECT *
-                          FROM empresa as e
-                          INNER JOIN empresaContato as ec
-                          on e.empresaId = ec.empresaIdFk 
-                          INNER JOIN empresaEndereco as ee
-                          on e.empresaId = ee.empresaIdFk
-                          INNER JOIN imagemEmpresa as ie
-                          on e.empresaId = ie.empresaIdFk
-                          WHERE e.status = 'ATIVO'";
+            }
 
-                $statement = $this->conexao->prepare($query);
-                $statement->execute();
-                
-                $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-                return $results;
-            } 
-
-            public function atualizar($empresa){
-                echo "<br> chegou: " . $empresa->empresaId;
-                echo "<br> chegou: " . $empresa->cnpjEmpresa;
-                echo "<br> chegou: " . $empresa->nomeEmpresa;
-                echo "<br> chegou: " . $empresa->statusEmpresa;
-                
+            public function atualizar($banner){
                 //Update tabela empresa
-                $statement =$empresa->conexao->prepare("UPDATE empresa SET
-                                                        cnpj=:cnpj, nome=:nome, responsavel=:responsavel, status=:status
-                                                        WHERE empresaId = :empresaId");
+                $statement =$empresa->conexao->prepare("UPDATE banner SET
+                                                        linkCampanha=:linkCampanha, posicaoSlide=:posicaoSlide
+                                                        WHERE empresaIdFk = :empresaIdFk");
                 $statement->execute(array(
-                    ':cnpj' => $empresa->cnpjEmpresa,
-                    ':nome' => $empresa->nomeEmpresa,
-                    ':responsavel' => $empresa->responsavelEmpresa,
-                    ':status' => $empresa->statusEmpresa,
-                    ':empresaId' => $empresa->empresaId
+                    ':linkCampanha' => $this->linkCampanha,
+                    ':posicaoSlide' => $this->posicaoSlide,
+                    ':empresaIdFk' => $this->empresaIdFk
                 ));
-
-                //Update tabela empresaendereco
-                $statement =$this->conexao->prepare("UPDATE empresaEndereco SET
-                                                     cidade=:cidade, bairro=:bairro, cep=:cep, rua=:rua, numero=:numero
-                                                     WHERE empresaIdFk = :empresaId");
-                $statement->execute(array(
-                    ':cidade' => $empresa->cidadeEndereco,
-                    ':bairro' => $empresa->bairroEndereco,
-                    ':cep' => $empresa->cepEndereco,
-                    ':rua' => $empresa->ruaEndereco,
-                    ':numero' => $empresa->numeroEndereco,
-                    ':empresaId' => $empresa->empresaId
-                ));
-
-                //Update tabela empresacontato
-                $statement =$this->conexao->prepare("UPDATE empresaContato SET
-                                                     email=:email, telefone=:telefone, celular=:celular, site=:site, facebookUrl=:facebookUrl, descricao=:descricao
-                                                     WHERE empresaIdFk = :empresaId");
-                $statement->execute(array(
-                    ':email' => $empresa->emailContato,
-                    ':telefone' => $empresa->telefoneContato,
-                    ':celular' => $empresa->celularContato,
-                    ':site' => $empresa->siteContato,
-                    ':facebookUrl' => $empresa->facebookContato,
-                    ':descricao' => $empresa->descricaoEmpresa,
-                    ':empresaId' => $empresa->empresaId
-                ));
-
             }      
 
     }
