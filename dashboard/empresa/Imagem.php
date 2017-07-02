@@ -36,11 +36,50 @@
             ];
         }
 
+        private function getCaminhoNomeBanner(){
+            $nomeImagem = $this->gerarNomeImagem();
+            $caminhoFinal = $this->caminhoPadrao . 'banners/' . $nomeImagem;
+            return [
+                "nomeImagem" => $nomeImagem,
+                "caminhoFinal" => $caminhoFinal
+            ];
+        }
+
         public function executarUpload(){
             if($this->verificarFileArray()){
                 if($this->verificarExtensao()){
                     $caminhoTemporario = $this->fileArray['tmp_name'];
                     $resultadoGetCaminhoNome = $this->getCaminhoNome();
+                    if(move_uploaded_file($caminhoTemporario, $resultadoGetCaminhoNome["caminhoFinal"])){
+                        return [
+                            "erro" => false,
+                            "descricao" => $resultadoGetCaminhoNome["nomeImagem"]
+                        ];
+                    } else {
+                        return [
+                            "erro" => true,
+                            "descricao" => "Erro ao realizar upload da imagem. Por favor tente novamente."
+                        ];
+                    }
+                } else {
+                    return [
+                        "erro" => true,
+                        "descricao" => "Arquivo selecionado não permitido. Por favor tente novamente selecionando uma imagem válida."
+                    ];
+                }
+            } else {
+                return [
+                    "erro" => true,
+                    "descricao" => "Erro ao recuperar imagem selecionada. Por favor tente novamente"
+                ];
+            }
+        }
+
+        public function executarUploadBanner(){
+            if($this->verificarFileArray()){
+                if($this->verificarExtensao()){
+                    $caminhoTemporario = $this->fileArray['tmp_name'];
+                    $resultadoGetCaminhoNome = $this->getCaminhoNomeBanner();
                     if(move_uploaded_file($caminhoTemporario, $resultadoGetCaminhoNome["caminhoFinal"])){
                         return [
                             "erro" => false,

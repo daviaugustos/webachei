@@ -9,119 +9,51 @@
             public function cadastrar(){
 
                 $this->conexao->beginTransaction();
-                $idEmpresaSalva = $this->salvarDados();
-                if ($idEmpresaSalva) {
-                    $resultadoSaveEndereco = $this->salvarEndereco($idEmpresaSalva);
-                    if($resultadoSaveEndereco){
-                        $resultadoSaveContato = $this->salvarContato($idEmpresaSalva);
-                        if($resultadoSaveContato){
-                            $resultadoUploadImagem = $this->executarUpload();
-                            if(!$resultadoUploadImagem["erro"]){
-                                $caminhoImagemFinal = $resultadoUploadImagem["descricao"];
-                                $resultadoSalvarCaminhoImagem = $this->salvarLocalImagem($idEmpresaSalva,$caminhoImagemFinal);
-                                if($resultadoSalvarCaminhoImagem){
-                                    $this->conexao->commit();
-                                    return [
-                                        "erro" => false,
-                                        "descricao" => "Empresa cadastrada com sucesso!"
-                                    ];
-                                } else {
-                                    $this->conexao->rollBack();
-                                    return [
-                                        "erro" => true,
-                                        "descricao" => "Erro ao salvar informações da imagem. Por favor tente novamente."
-                                    ];
-                                }
-                            } else {
-                                $this->conexao->rollBack();
-                                return $resultadoUploadImagem;
-                            }
-                        } else {
-                            $this->conexao->rollBack();                        
-                            return [
-                                "erro" => true,
-                                "descricao" => "Erro ao cadastrar contatos da empresa. Por favor tente novamente."
-                            ];
-                        }
-                    } else {
-                        $this->conexao->rollBack();                    
+
+                /*Upload imagem*/
+
+                $resultadoUploadImagem = $this->executarUploadBanner();
+                
+                if(!$resultadoUploadImagem["erro"]){
+                    
+                    $caminhoImagemFinal = $resultadoUploadImagem["descricao"];
+                    $resultadoSalvarBanner = $this->salvarDados($caminhoImagemFinal);
+
+                    if($resultadoSalvarBanner){
+                        $this->conexao->commit();
                         return [
-                            "erro" => true,
-                            "descricao" => "Erro ao cadastrar endereço da empresa. Por favor tente novamente."
+                            "erro" => false,
+                            "descricao" => "Banner cadastrado com sucesso!"
                         ];
                     }
+                    else {
+                        $this->conexao->rollBack();
+                        return [
+                            "erro" => true,
+                            "descricao" => "Erro ao salvar informações do Banner. Por favor tente novamente."
+                        ];
+                    }
+
                 } else {
                     $this->conexao->rollBack();
-                    return [
-                            "erro" => true,
-                            "descricao" => "Erro ao cadastrar dados da empresa. Por favor tente novamente."
-                    ];
+                    return $resultadoUploadImagem;
                 }
             }
 
-            //Persiste os dados de informação
-            // retorno: ultimo id inserido na tabela empresa
-            private function salvarDados(){
-                $statement =$this->conexao->prepare("INSERT INTO empresa (cnpj, nome, responsavel, status)".
-                                                    " VALUES (:cnpj, :nome, :responsavel, :status)");
+            private function salvarDados($caminhoImagemFinal){
+                $statement =$this->conexao->prepare("INSERT INTO banner (empresaIdFk, linkCampanha, posicaoSlide, nomeImagem)".
+                                            " VALUES (:empresaIdFk, :linkCampanha, :posicaoSlide, :nomeImagem)");
 
                 $retornoInsert = $statement->execute(array(
-                    ':cnpj' => $this->cnpjEmpresa,
-                    ':nome' => $this->nomeEmpresa,
-                    ':responsavel' => $this->responsavelEmpresa,
-                    ':status' => $this->statusEmpresa
-                ));
-                return $this->conexao->lastInsertId();
-            }
-            
-             //Persiste os dados de endereço
-             // retorno: boolean com o resultado do statement sql
-            private function salvarEndereco($idEmpresaSalva){
-                $statement =$this->conexao->prepare("INSERT INTO empresaEndereco (empresaIdFk, cidade, bairro, cep, rua, numero)".
-                                                    " VALUES (:empresaIdFk, :cidade, :bairro, :cep, :rua, :numero)");
-
-                $retornoInsert = $statement->execute(array(
-                    ':empresaIdFk' => $idEmpresaSalva,
-                    ':cidade' => $this->cidadeEndereco,
-                    ':bairro' => $this->bairroEndereco,
-                    ':cep' => $this->cepEndereco,
-                    ':rua' => $this->ruaEndereco,
-                    ':numero' => $this->numeroEndereco
-                ));
-                return $retornoInsert;
-            }
-
-             //Persiste os dados de contato
-             // retorno: boolean com o resultado do statement sql
-            private function salvarContato($idEmpresaSalva){
-                $statement =$this->conexao->prepare("INSERT INTO empresaContato (empresaIdFk, email, telefone, celular, site, facebookUrl, descricao)".
-                                                    " VALUES (:empresaIdFk, :email, :telefone, :celular, :site, :facebookUrl, :descricao)");
-
-                $retornoInsert = $statement->execute(array(
-                    ':empresaIdFk' => $idEmpresaSalva,
-                    ':email' => $this->emailContato,
-                    ':telefone' => $this->telefoneContato,
-                    ':celular' => $this->celularContato,
-                    ':site' => $this->siteContato,
-                    ':facebookUrl' => $this->facebookContato,
-                    ':descricao' => $this->descricaoEmpresa,
-                ));
-                return $retornoInsert;
-            }
-
-            //Persiste os dados pra acesso da imagem
-            // retorno: boolean com o resultado do statement sql
-            private function salvarLocalImagem($idEmpresaSalva,$caminhoImagemFinal){
-                $statement =$this->conexao->prepare("INSERT INTO imagemEmpresa (empresaIdFk, nomeImagem)".
-                                                    " VALUES (:empresaIdFk, :nomeImagem)");
-
-                $retornoInsert = $statement->execute(array(
-                    ':empresaIdFk' => $idEmpresaSalva,
+                    ':empresaIdFk' => $this->empresaIdFk,
+                    ':linkCampanha' => $this->linkCampanha,
+                    ':posicaoSlide' => $this->posicaoSlide,
                     ':nomeImagem' => $caminhoImagemFinal
                 ));
                 return $retornoInsert;
             }
             
+
             public function listaEmpresa($idEmpresa){
                 $query = "SELECT *
                           FROM empresa as e

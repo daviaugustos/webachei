@@ -10,8 +10,8 @@
     $novoBanner->fileArray = $_FILES["imagem"];
 
     $resultadoCadastro = $novoBanner->cadastrar();
-    if($resultadoCadastro){
-        header("Location: ../listagem-banners.php");
-    }
+    //if($resultadoCadastro){
+        //header("Location: ../listagem-banners.php");
+    //}
 
 ?>
