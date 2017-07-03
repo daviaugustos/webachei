@@ -34,39 +34,39 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Cadastro de Banner</a>
+						<a class="navbar-brand" href="#">Editar Banner</a>
 					</div>
 					<?php include "includes/logout.php" ?>
 				</div>
 			</nav>
 
-	        <div class="content">
+	        <div id="editar-banner" class="content">
 	            <div class="container-fluid">
 	                <div class="row">
 	                    <div class="col-md-8">
 	                        <div class="card">
 	                            <div class="card-header" data-background-color="purple">
-	                                <h4 class="title">Novo Banner</h4>
-									<p class="category">Complete com os dados do Banner</p>
+	                                <h4 class="title">Editar Banner</h4>
+									<p class="category">Atualize os dados do Banner</p>
 	                            </div>
 	                            <div class="card-content">
 									<!-- Inicio do formulário -->
-	                                <form enctype="multipart/form-data" accept-charset="utf-8" name="cadastraEmpresa" method="POST" action="banner/processa-banner.php">
-	                                    <div class="row">
-	                                        <div class="col-md-4">
-												<div class="form-group">
-													<div class="mdl-selectfield">
-														<select required class="form-control browser-default" name="empresaIdFk">
-															<option value="" disabled selected>Selecione a empresa</option>
-															<?php
-																foreach ($empresas as $empresa):
-															?>
-																<option value="<?=$empresa['empresaId']?>"><?=$empresa['nome']?></option>
-															<?php
-																endforeach;
-															?>
-														</select>
+	                                <form enctype="multipart/form-data" accept-charset="utf-8" name="cadastraEmpresa" method="POST" action="banner/atualiza-banner.php">
+	                                    <div class="row padding-top-10">
+										<!--Imagem/Logo/Banner -->
+											<div class="card-anuncio col-sm-12 col-md-12 col-xs-12 col-xx-12">
+												<div class="thumbnail">
+													<div class="img-anuncio">
+														<img src="../imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
 													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+	                                        <div class="col-md-12">
+												<div class="form-group">
+													<label>Banner da Empresa: </label>
+													<p><?= $empresa["nome"] ?></p>
 												</div>
 											</div>
 	                                    </div>
@@ -88,7 +88,7 @@
 	                                    </div>
 										
 										<!--Área destinada a imagem banner da empresa-->
-										<div class="row" style="min-height: 200px;">
+										<!--<div class="row" style="min-height: 200px;">
 											<div class="col-md-12">
 												<div>
 													<label>Imagem/Banner/Logo</label>
@@ -99,10 +99,10 @@
 												</label>													
 												<input required id="input-imagem" type="file" name="imagem"/>
 											</div>
-	                                    </div>
+	                                    </div>-->
 
 										<div class="center padding-top-20">
-											<button type="submit" class="btn btn-primary">Cadastrar</button>
+											<button type="submit" class="btn btn-primary">Salvar</button>
 										</div>
 	                                </form>
 									<!-- Fim do formulário -->

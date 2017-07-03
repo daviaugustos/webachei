@@ -87,13 +87,15 @@
 										?>
 											<div class="padding-20 row-img-banner">
 												<div class="card-banner-img">
-													<a class="banner edit" href="edita-banner.php?bannerId=<?=$banner["bannerId"]?>">
-														<i class="material-icons">mode_edit</i>
+													<a href="edita-banner.php?bannerId=<?=$banner["bannerId"]?>">
+														<span class="banner edit">
+															<i class="material-icons">mode_edit</i>
+														</span>
 													</a>
 													<span class="banner delete">
 														<i class="material-icons">delete</i>
 													</span>
-													<a href="">
+													<a>
 														<img src="../imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
 													</a>
 												</div>

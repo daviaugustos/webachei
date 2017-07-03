@@ -590,8 +590,6 @@ body.login{
 /*Editar Empresa*/
 #editar-empresa .img-anuncio > img{
   height: 150px;
-  /*left: 0;*/
-  /*transform: none;*/
 }
 
 #editar-empresa .thumbnail{
@@ -631,6 +629,8 @@ body.login{
 .label-imagem text{
   vertical-align: text-bottom;
 }
+
+
 
 /*-- Banners --*/
 .list-banner{
@@ -716,6 +716,17 @@ span.banner.delete{
 span.banner.delete:hover{
     background: rgb(244, 67, 54);
 }  
+
+/*Editar Banner*/
+#editar-banner .img-anuncio > img{
+  height: 150px;
+}
+#editar-banner .thumbnail{
+  box-shadow: none;
+}
+
+
+
 
 /*-- Footer --*/
 footer ul li a{
