@@ -5,7 +5,7 @@
 	verificaUsuario();
 	header("Content-type: text/html; charset=utf-8");
 	include "includes/header.php";
-	include "empresa/lista-empresa-ativa.php";
+	include "banner/carrega-detalhe-banner.php";
 ?>
 <body>
 	<div class="wrapper">
@@ -74,7 +74,7 @@
 	                                        <div class="col-md-12">
 												<div class="form-group label-floating">
 													<label class="control-label">Link Campanha</label>
-													<input required type="text" class="form-control" name="linkCampanha">
+													<input required type="text" class="form-control" name="linkCampanha" value="<?=$banner["linkCampanha"]?>">
 												</div>
 	                                        </div>
 										</div>
@@ -82,7 +82,7 @@
 	                                        <div class="col-md-3">
 												<div class="form-group label-floating">
 													<label class="control-label">Posição (Slide)</label>
-													<input required type="number" class="form-control" name="posicaoSlide" >
+													<input required type="number" class="form-control" name="posicaoSlide" value="<?=$banner["posicaoSlide"]?>">
 												</div>
 	                                        </div>
 	                                    </div>

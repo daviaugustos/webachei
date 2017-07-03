@@ -55,15 +55,15 @@
             }
             
 
-            public function listaBanner($idEmpresa){
+            public function listaBanner($idBanner){
                 $query = "SELECT *
                           FROM banner as b
                           INNER JOIN empresa as e
                           on e.empresaId = b.empresaIdFk 
-                          WHERE empresaId = :empresaId";
+                          WHERE bannerId = :bannerId";
 
                 $statement = $this->conexao->prepare($query);
-                $statement->execute(array(':empresaId' => $idEmpresa));
+                $statement->execute(array(':bannerId' => $idBanner));
                 
                 $results = $statement->fetch(PDO::FETCH_ASSOC);
                 return $results;

@@ -87,7 +87,7 @@
 										?>
 											<div class="padding-20 row-img-banner">
 												<div class="card-banner-img">
-													<a class="banner edit" href="edita-banner.php">
+													<a class="banner edit" href="edita-banner.php?bannerId=<?=$banner["bannerId"]?>">
 														<i class="material-icons">mode_edit</i>
 													</a>
 													<span class="banner delete">
