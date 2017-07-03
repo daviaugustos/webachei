@@ -37,7 +37,7 @@
 
     $resultadoCadastro = $novaEmpresa->cadastrar();
     if($resultadoCadastro){
-        header("Location: ../dashboard.php");
+        header("Location: ../listagem-empresa.php");
     }
 
 
