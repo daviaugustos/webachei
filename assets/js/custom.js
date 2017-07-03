@@ -9,6 +9,17 @@ $(document).ready(function(){
     carregaMascaras();
     defineMascaraCnpjCpf();
     
+    // Load de imagem
+    $(document).on('change', '#input-imagem', function(){
+        if($("#input-imagem").val() != ""){
+            $(".info-imagem p").text("Imagem selecionada: " + $("#input-imagem").val());
+            $(".info-imagem p").removeClass('info-imagem-error');
+        }
+        else{
+            $(".info-imagem p").text("Nenhuma imagem foi selecionada")
+            $(".info-imagem p").addClass('info-imagem-error');
+        }
+    });
 });
 
 
