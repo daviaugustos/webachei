@@ -210,11 +210,17 @@
 													<text>Carregar imagem</text>
 												</label>													
 												<input required id="input-imagem" type="file" name="imagem"/>
+												
+												<div class="info-imagem margin-top-20">
+													<p class="info-imagem-error">Nenhuma imagem foi selecionada</p>
+												</div>
 											</div>
 	                                    </div>
 
+										
+
 										<div class="center padding-top-20">
-											<button type="submit" class="btn btn-primary">Cadastrar</button>
+											<button id="cadastra-empresa" type="submit" class="btn btn-primary">Cadastrar</button>
 										</div>
 	                                </form>
 									<!-- Fim do formulário -->

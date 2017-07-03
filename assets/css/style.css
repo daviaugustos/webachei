@@ -69,6 +69,9 @@ button:hover, button:active, button:focus{
 .margin-top-40{
     margin-top: 40px;
 }
+.margin-top-20{
+    margin-top: 20px;
+}
 
 
 /*Datepicker*/
@@ -576,8 +579,12 @@ body.login{
 }
 
 /*Cadastro Empresa*/
-label.control-label{
-  /*font-size: 14px;*/
+.info-imagem{
+  font-weight: 600;
+  color: #3387a9; 
+}
+.info-imagem-error{
+  color: #f7665c;
 }
 
 /*Editar Empresa*/
@@ -797,4 +804,3 @@ footer p{
       width: 100% !important;
     }
 }
-
