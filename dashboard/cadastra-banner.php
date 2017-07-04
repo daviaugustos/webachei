@@ -98,6 +98,10 @@
 													<text>Carregar imagem</text>
 												</label>													
 												<input required id="input-imagem" type="file" name="imagem"/>
+
+												<div class="info-imagem margin-top-20">
+													<p class="info-imagem-error">Nenhuma imagem foi selecionada</p>
+												</div>
 											</div>
 	                                    </div>
 

@@ -6,9 +6,6 @@ $(document).on('click', '.anchor', function(event){
 });
 
 $(document).ready(function(){
-    carregaMascaras();
-    defineMascaraCnpjCpf();
-    
     // Load de imagem
     $(document).on('change', '#input-imagem', function(){
         if($("#input-imagem").val() != ""){
@@ -20,6 +17,9 @@ $(document).ready(function(){
             $(".info-imagem p").addClass('info-imagem-error');
         }
     });
+
+    carregaMascaras();
+    defineMascaraCnpjCpf();
 });
 
 
