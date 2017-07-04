@@ -66,6 +66,7 @@
 	                                        <div class="col-md-12">
 												<div class="form-group">
 													<label>Banner da Empresa: </label>
+													<input type="hidden" name="empresaIdFk" value="<?= $empresa['empresaId'];?>">
 													<p><?= $empresa["nome"] ?></p>
 												</div>
 											</div>

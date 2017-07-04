@@ -83,16 +83,18 @@
                 return $results;
             }
 
-            public function atualizar($banner){
+            public function atualizar(){
                 //Update tabela empresa
-                $statement =$empresa->conexao->prepare("UPDATE banner SET
+                $statement =$this->conexao->prepare("UPDATE banner SET
                                                         linkCampanha=:linkCampanha, posicaoSlide=:posicaoSlide
                                                         WHERE empresaIdFk = :empresaIdFk");
-                $statement->execute(array(
+                $retorno = $statement->execute(array(
                     ':linkCampanha' => $this->linkCampanha,
                     ':posicaoSlide' => $this->posicaoSlide,
                     ':empresaIdFk' => $this->empresaIdFk
                 ));
+
+                return $retorno;
             }      
 
     }
