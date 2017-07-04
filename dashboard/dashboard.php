@@ -5,6 +5,7 @@
   	include "../includes/logica-usuario.php";
 	verificaUsuario();
 	include "includes/header.php"; 
+	include "relatorio/lista-relatorio.php"
 ?>
 <body>
 
@@ -67,7 +68,33 @@
 			</nav>
 
 			<div class="content">
-				<div class="container-fluid" style="min-height: 800px;">	
+				<div class="container-fluid" style="min-height: 800px;">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="card card-stats">
+								<div class="card-header" data-background-color="green">
+									<i class="material-icons">store</i>
+								</div>
+								<div class="card-content">
+									<p class="category">Empresas ativas</p>
+									<h3 class="title"><?= $qtdEmpresasAtivas ?></h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="card card-stats">
+								<div class="card-header" data-background-color="orange">
+									<i class="material-icons">collections</i>
+								</div>
+								<div class="card-content">
+									<p class="category">Banners ativos</p>
+									<h3 class="title"><?= $qtdBannersAtivos ?></h3>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
 			</div>
 		</div>

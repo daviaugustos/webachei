@@ -6,6 +6,10 @@ $(document).on('click', '.anchor', function(event){
 });
 
 $(document).ready(function(){
+
+    //Set primeiro item do slider da index ativo
+    $(".carousel-inner .item:first-child").addClass("active");
+
     // Load de imagem
     $(document).on('change', '#input-imagem', function(){
         if($("#input-imagem").val() != ""){

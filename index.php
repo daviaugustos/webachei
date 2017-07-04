@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 	include "dashboard/empresa/lista-empresa-ativa.php";
+	include "dashboard/banner/lista-banner.php";
 ?>
 <head>
 	<meta charset="utf-8" />
@@ -90,11 +91,11 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-6">
 						<p class="title-slide">Empresas de sua cidade aqui</p>
 					</div>
 
-					<div class="col-md-8">
+					<div class="col-md-8 col-sm-6">
 
 						<!-- Carousel Card -->
 						<div class="card card-raised card-carousel">
@@ -103,31 +104,28 @@
 
 									<!-- Indicators -->
 									<ol class="carousel-indicators">
-										<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-										<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-										<li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+										<?php
+											$count = 0;
+											foreach ($banners as $banner):
+										?>
+												<li data-target="#carousel-example-generic" data-slide-to="<?=$count?>"></li>
+										<?php
+											$count ++;
+											endforeach;
+										?>
 									</ol>
 
 									<!-- Wrapper for slides -->
 									<div class="carousel-inner">
-										<div class="item">
-											<img src="assets/img/bg2.jpeg" alt="Awesome Image">
-											<!--<div class="carousel-caption">
-												<p><i class="material-icons">location_on</i> Yellowstone National Park, United States</p>
-											</div>-->
-										</div>
-										<div class="item">
-											<img src="assets/img/bg3.jpeg" alt="Awesome Image">
-											<!--<div class="carousel-caption">
-												<p><i class="material-icons">location_on</i> Somewhere Beyond, United States</p>
-											</div>-->
-										</div>
-										<div class="item active">
-											<img src="assets/img/bg4.jpeg" alt="Awesome Image">
-											<!--<div class="carousel-caption">
-												<p><i class="material-icons">location_on</i> Yellowstone National Park, United States</p>
-											</div>-->
-										</div>
+										<?php
+											foreach ($banners as $banner):
+										?>
+											<div class="item">
+												<img src="imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
+											</div>
+										<?php
+											endforeach;
+										?>
 									</div>
 
 									<!-- Controls -->
@@ -144,6 +142,7 @@
 
 					</div>
 				</div>
+
 			</div>
 		</div>
 
