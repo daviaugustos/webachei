@@ -91,11 +91,11 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-4 col-sm-12">
 						<p class="title-slide">Empresas de sua cidade aqui</p>
 					</div>
 
-					<div class="col-md-8 col-sm-6">
+					<div class="col-md-8 col-sm-12">
 
 						<!-- Carousel Card -->
 						<div class="card card-raised card-carousel">
@@ -121,7 +121,9 @@
 											foreach ($banners as $banner):
 										?>
 											<div class="item">
-												<img src="imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
+												<a href="detalhes/detalhes.php?empresaId=<?php echo $banner['empresaIdFk']?>">
+													<img src="imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
+												</a>
 											</div>
 										<?php
 											endforeach;

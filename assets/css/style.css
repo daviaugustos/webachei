@@ -561,22 +561,7 @@ body.login{
   font-style: italic;
 }
 
-/*Carousel*/
-#carousel .card{
-  box-shadow: none;
-}
-#carousel .title-slide{
-  color:#236d96;
-  font-size: 32px;
-  font-family: 'Shadows Into Light Two', cursive;
-  line-height: 1.42857143;
-  text-align: center;
-}
-#carousel .row{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
+
 
 /*Cadastro Empresa*/
 .info-imagem{
@@ -631,6 +616,24 @@ body.login{
 }
 
 
+
+
+/*Carousel*/
+#carousel .card{
+  box-shadow: none;
+}
+#carousel .title-slide{
+  color:#236d96;
+  font-size: 32px;
+  font-family: 'Shadows Into Light Two', cursive;
+  line-height: 1.42857143;
+  text-align: center;
+}
+#carousel .row{
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center; 
+}
 
 /*-- Banners --*/
 .list-banner{
@@ -727,10 +730,35 @@ span.banner.delete:hover{
 
 
 /*Slider Index*/
-.carousel-inner .item img{
-  height:400px;
+.carousel-inner .item a img{
+  height:450px;
+  cursor: pointer;
 }
-
+.carousel-control{
+  width: 100px !important;
+}
+.carousel-control:hover{
+  background: rgba(0, 0, 0, 0.52);
+  transition: all .5s ease;
+}
+.item{
+    position: relative;
+    overflow: hidden;
+}
+.item img{
+    margin:0 !important;
+    z-index: 3;
+    transform: translateX(-50%) scale(1.1);
+    display: block;
+    transition: all .5s;
+    max-width: inherit;
+    position: relative;
+    left: 50%;
+    width: auto;
+}
+.carousel-inner > .item > a > img {
+  max-width:initial !important;
+}
 
 
 /*-- Footer --*/
@@ -786,6 +814,13 @@ footer p{
     #anuncios .img-anuncio{
       height: 170px;
     }
+    .carousel-inner .item a img{
+      height:300px;
+      cursor: pointer;
+    }
+    .carousel-control{
+      width: 100px !important;
+    }
 }
 
 /*@media only screen and (max-width : 480px) {
@@ -807,6 +842,13 @@ footer p{
       left: 50%;
       height: 250px;
     }
+    .carousel-inner .item a img{
+      height:250px;
+      cursor: pointer;
+    }
+    .carousel-control{
+      width: 70px !important;
+    }
     footer .pull-right{
       float: none !important;
     }
@@ -819,4 +861,5 @@ footer p{
     .iframe-maps iframe{
       width: 100% !important;
     }
+    
 }
