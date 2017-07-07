@@ -18,7 +18,7 @@
 			<h1 class="font-zero">Informações Webachei</h1>
 			<div class="row">
 				<div class="pull-right">
-					<p><b>(17) 98165 1695</b></p>
+					<p><b>(17) 99205 7585</b></p>
 				</div>
 			</div>
 			<div class="row">
@@ -26,12 +26,10 @@
 					<h1 class="font-zero">Links Webachei</h1>
 					<ul>
 						<li>
-							<a href="#">
-								Anúncios
-							</a>
+							<a href="#anuncios" class="anchor">Anúncios</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" target="_blank" data-toggle="modal" data-target="#contatoModal">
 								Contato
 							</a>
 						</li>

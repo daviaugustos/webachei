@@ -8,7 +8,8 @@
         $enderecoExibicao = $empresas[$i]['rua']. ', ' . $empresas[$i]['numero'];
 
         $linkMaps = $empresas[$i]['rua'].", ".
-                    $empresas[$i]['numero']." - ".
+                    $empresas[$i]['numero'].", ".
+                    $empresas[$i]['bairro'].", ".
                     $empresas[$i]['cidade']." - ".
                     'SP, '.
                     $empresas[$i]['cep'];

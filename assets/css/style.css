@@ -445,6 +445,11 @@ select:focus {
     padding-top: 10px;
     font-size: 13px;
 }
+.descricao-anuncio .icon-anuncio{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .thumbnail .icon-anuncio{
     padding-bottom: 15px;
 }
@@ -453,7 +458,7 @@ select:focus {
    vertical-align: bottom;
 }
 .icon-anuncio span, .icon-anuncio a{
-  vertical-align: -webkit-baseline-middle;
+    /*vertical-align: -webkit-baseline-middle;*/
 }
 .ver-mais-anuncio{
     border-top: 1px solid #ccc;
