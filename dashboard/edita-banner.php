@@ -71,14 +71,14 @@
 												</div>
 											</div>
 	                                    </div>
-	                                    <div class="row">
+	                                    <!--<div class="row">
 	                                        <div class="col-md-12">
 												<div class="form-group label-floating">
 													<label class="control-label">Link Campanha</label>
 													<input required type="text" class="form-control" name="linkCampanha" value="<?=$banner["linkCampanha"]?>">
 												</div>
 	                                        </div>
-										</div>
+										</div>-->
 										<div class="row">
 	                                        <div class="col-md-3">
 												<div class="form-group label-floating">
