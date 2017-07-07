@@ -1,7 +1,5 @@
 <?php 
 
-    include_once ($_SERVER["DOCUMENT_ROOT"] . '/webachei/dashboard/empresa/Empresa.php');
-
     class Banner Extends Imagem{
             public $empresaIdFk;
             public $linkCampanha;
