@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <?php
 	include "dashboard/empresa/lista-empresa-ativa.php";
 	include "dashboard/banner/lista-banner.php";
@@ -13,8 +13,8 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<meta name="description" content="Veja aqui uma análise de um documento HTML5..."></meta>
-	<meta name="robots" content="index, follow"></meta>
+	<meta name="description" content="Encontre as empresas de sua cidade aqui!"></meta>
+	<meta name="robots" content="index, nofollow"></meta>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
