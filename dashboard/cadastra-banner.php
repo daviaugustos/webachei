@@ -1,9 +1,11 @@
+<?php 
+	header("Content-type: text/html; charset=utf-8");
+	include "../includes/logica-usuario.php"; 
+?>
 <!doctype html>
 <html lang="en">
 <?php 
-	include "../includes/logica-usuario.php";
 	verificaUsuario();
-	header("Content-type: text/html; charset=utf-8");
 	include "includes/header.php";
 	include "empresa/lista-empresa-ativa.php";
 ?>

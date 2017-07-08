@@ -1,6 +1,6 @@
 <?php 
 
-    include "Imagem.php";  
+    require_once("Imagem.php");  
     class Empresa Extends Imagem{
             public $empresaId;
             public $nomeEmpresa;
@@ -189,10 +189,6 @@
             } 
 
             public function atualizar($empresa){
-                echo "<br> chegou: " . $empresa->empresaId;
-                echo "<br> chegou: " . $empresa->cnpjEmpresa;
-                echo "<br> chegou: " . $empresa->nomeEmpresa;
-                echo "<br> chegou: " . $empresa->statusEmpresa;
                 
                 //Update tabela empresa
                 $statement =$empresa->conexao->prepare("UPDATE empresa SET

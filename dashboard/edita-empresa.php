@@ -1,7 +1,7 @@
+<?php include "../includes/logica-usuario.php"; ?>
 <!doctype html>
 <html lang="en">
-<?php 
-	include "../includes/logica-usuario.php";
+<?php
 	verificaUsuario();
 	include "includes/header.php";
 	include "empresa/carrega-empresa.php";
