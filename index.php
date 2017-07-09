@@ -11,12 +11,23 @@
 
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<meta name="description" content="Encontre as empresas de sua cidade aqui!"></meta>
-	<meta name="robots" content="index, nofollow"></meta>
-
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="description" content="Encontre restaurantes, hotéis, serviços e lojas de São José do Rio Preto e região!"></meta>
+	<meta name="robots" content="index, follow"></meta>
+	<meta name="author" content="Ekkode - Criação de Sites e Aplicativos - São José do Rio Preto/SP - http://www.ekkode.com.br">
+	
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:description" content="Webachei - Encontre restaurantes, hotéis, serviços e lojas de São José do Rio Preto e região!">
+	<meta property="og:title" content="Webachei - Site de busca em São José do Rio Preto e região">
+	<meta property="og:site_name" content="Webachei">
+	<meta property="og:url" content="http://www.webachei.com.br/">
+
+	<meta property="og:image" content="www.webachei.com.br/imagem.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="600">
 
 	<!-- Fonts and icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -69,21 +80,6 @@
 	</header>
 	
 	<div class="wrapper has-header">
-
-		<!--Background e Sliders -->
-		<!--<div class="header header-filter" style="background-image: url('assets/img/bg2.jpeg');">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="brand">
-							<h1>Webachei</h1>
-							<h3>Encontre as empresas de sua cidade aqui!</h3>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>-->
 
 		<!--Sliders Home-->
 		<div class="section bg-white" id="carousel">
