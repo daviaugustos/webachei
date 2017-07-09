@@ -30,7 +30,15 @@
 	<meta property="og:image:height" content="600">
 
 	<!-- Fonts and icons -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+
+	<style>
+		<?php
+			echo file_get_contents('assets/css/font-material.css');
+		?>
+	</style>
+	<!--<link href="assets/css/font-material.css" rel="stylesheet" />-->
+
 	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
