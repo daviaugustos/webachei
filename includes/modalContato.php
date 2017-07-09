@@ -1,9 +1,5 @@
 <!--Modals-->
 
-<?php
-	include "../testemail.php";
-?>
-
 <div id="contatoModal" class="modal fade" role="dialog">
 	<div class="modal-dialog modal-md">
 		<!-- Modal content-->
