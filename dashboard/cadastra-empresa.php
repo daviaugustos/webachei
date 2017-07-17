@@ -79,12 +79,26 @@
 									<!-- Inicio do formulário -->
 	                                <form enctype="multipart/form-data" accept-charset="utf-8" name="cadastraEmpresa" method="POST" action="empresa/processa-empresa.php">
 	                                    <div class="row">
-	                                        <div class="col-md-12">
+	                                        <div class="col-md-8">
 												<div class="form-group label-floating">
 													<label class="control-label">Nome da Empresa</label>
 													<input required type="text" class="form-control" name="nomeEmpresa">
 												</div>
 	                                        </div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<div class="mdl-selectfield">
+														<select required class="form-control browser-default" name="categoriaEmpresa">
+															<option value="" disabled selected>Categoria</option>
+															<option value="BARESRESTAURANTES">Bares e restaurantes</option>
+															<option value="MODA">Moda</option>
+															<option value="CASACARNES">Casa de carnes</option>
+															<option value="SUPERMERCADOS">Supermercados</option>
+															<option value="PADARIA">Padaria</option>
+														</select>
+													</div>
+												</div>
+											</div>
 	                                    </div>
 	                                    <div class="row">
 	                                        <div class="col-md-4">
