@@ -94,7 +94,18 @@
                 ));
 
                 return $retorno;
+            }   
+
+            public function deleteBanner($bannerId){
+                //Update tabela empresa
+                $statement =$this->conexao->prepare("DELETE FROM banner WHERE bannerId = :bannerId");
+                $retorno = $statement->execute(array(
+                    ':bannerId' => $bannerId
+                ));
+
+                return $retorno;
             }      
+   
 
     }
 
