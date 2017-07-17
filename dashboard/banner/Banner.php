@@ -1,5 +1,5 @@
-<?php 
-    require_once("/home/webacheicom/public_html/dashboard/empresa/Imagem.php");
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/webachei/dashboard/empresa/Imagem.php");
     class Banner Extends Imagem{
             public $empresaIdFk;
             public $linkCampanha;
