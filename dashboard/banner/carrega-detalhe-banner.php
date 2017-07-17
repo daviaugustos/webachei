@@ -1,7 +1,7 @@
 <?php 
 
     require_once("Banner.php");
-    require_once("/home/webacheicom/public_html/dashboard/empresa/Empresa.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/webachei/dashboard/empresa/Empresa.php");
     $bannerObj = new Banner();
     $empresaObj = new Empresa();
 

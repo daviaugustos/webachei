@@ -92,9 +92,11 @@
 															<i class="material-icons">mode_edit</i>
 														</span>
 													</a>
-													<span class="banner delete">
-														<i class="material-icons">delete</i>
-													</span>
+													<a href="banner/deleta-banner.php?bannerId=<?=$banner["bannerId"]?>">
+														<span class="banner delete">
+															<i class="material-icons">delete</i>
+														</span>
+													</a>
 													<a>
 														<img src="../imagens/banners/<?= $banner['nomeImagem'] ?>" alt="">
 													</a>
