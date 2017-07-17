@@ -19,6 +19,7 @@
     $novaEmpresa->cnpjEmpresa = $_POST["cnpjEmpresa"];
     $novaEmpresa->responsavelEmpresa = $_POST["responsavelEmpresa"];
     $novaEmpresa->statusEmpresa = $_POST["statusEmpresa"];
+    $novaEmpresa->categoriaEmpresa = $_POST["categoriaEmpresa"];
     //Dados de endereço
     $novaEmpresa->cidadeEndereco = $_POST["cidadeEndereco"];
     $novaEmpresa->bairroEndereco = $_POST["bairroEndereco"];

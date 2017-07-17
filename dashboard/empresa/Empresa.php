@@ -18,6 +18,7 @@
             public $facebookContato;
             public $descricaoEmpresa;
             public $statusEmpresa;
+            public $categoriaEmpresa;
 
             public function cadastrar(){
 
@@ -75,14 +76,15 @@
             //Persiste os dados de informação
             // retorno: ultimo id inserido na tabela empresa
             private function salvarDados(){
-                $statement =$this->conexao->prepare("INSERT INTO empresa (cnpj, nome, responsavel, status)".
-                                                    " VALUES (:cnpj, :nome, :responsavel, :status)");
+                $statement =$this->conexao->prepare("INSERT INTO empresa (cnpj, nome, responsavel, status, categoria)".
+                                                    " VALUES (:cnpj, :nome, :responsavel, :status, :categoria)");
 
                 $retornoInsert = $statement->execute(array(
                     ':cnpj' => $this->cnpjEmpresa,
                     ':nome' => $this->nomeEmpresa,
                     ':responsavel' => $this->responsavelEmpresa,
-                    ':status' => $this->statusEmpresa
+                    ':status' => $this->statusEmpresa,
+                    ':categoria' => $this->categoriaEmpresa
                 ));
                 return $this->conexao->lastInsertId();
             }
