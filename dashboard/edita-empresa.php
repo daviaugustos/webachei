@@ -64,12 +64,26 @@
 											</div>
 										</div>
 	                                    <div class="row">
-	                                        <div class="col-md-12">
+	                                        <div class="col-md-8">
 												<div class="form-group label-floating">
 													<label class="control-label">Nome da Empresa</label>
 													<input required type="text" class="form-control" name="nomeEmpresa" value="<?= $empresa['nome'];?>">
 												</div>
 	                                        </div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<div class="mdl-selectfield">
+														<select required class="form-control browser-default" name="categoriaEmpresa">
+															<option value="" disabled selected>Categoria</option>
+															<option <?php echo ($empresa['categoria'] == 'BARESRESTAURANTES' ? ' selected="selected"' : ''); ?>  value="BARESRESTAURANTES">Bares e restaurantes</option>
+															<option <?php echo ($empresa['categoria'] == 'MODA' ? ' selected="selected"' : ''); ?>  value="MODA">Moda</option>
+															<option <?php echo ($empresa['categoria'] == 'CASACARNES' ? ' selected="selected"' : ''); ?>  value="CASACARNES">Casa de carnes</option>
+															<option <?php echo ($empresa['categoria'] == 'SUPERMERCADOS' ? ' selected="selected"' : ''); ?> value="SUPERMERCADOS">Supermercados</option>
+															<option <?php echo ($empresa['categoria'] == 'PADARIA' ? ' selected="selected"' : ''); ?> value="PADARIA">Padaria</option>
+														</select>
+													</div>
+												</div>
+											</div>
 	                                    </div>
 	                                    <div class="row">
 	                                        <div class="col-md-4">
