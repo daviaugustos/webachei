@@ -194,13 +194,14 @@
                 
                 //Update tabela empresa
                 $statement =$empresa->conexao->prepare("UPDATE empresa SET
-                                                        cnpj=:cnpj, nome=:nome, responsavel=:responsavel, status=:status
+                                                        cnpj=:cnpj, nome=:nome, responsavel=:responsavel, status=:status, categoria=:categoria
                                                         WHERE empresaId = :empresaId");
                 $statement->execute(array(
                     ':cnpj' => $empresa->cnpjEmpresa,
                     ':nome' => $empresa->nomeEmpresa,
                     ':responsavel' => $empresa->responsavelEmpresa,
                     ':status' => $empresa->statusEmpresa,
+                    ':categoria' => $empresa->categoriaEmpresa,
                     ':empresaId' => $empresa->empresaId
                 ));
 
