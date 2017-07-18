@@ -85,3 +85,23 @@ $(".search-card").keyup(function () {
     
 });
 
+$("#searchCategoria").change(function () {
+    var texto = $(this).val().toUpperCase();
+    if (texto == "TODAS") {
+        $(".card-anuncio").show()
+    }else if (texto != "") {
+        $(".card-anuncio").each(function () {
+            if ($("#categoriaEmpresaSelect", this).val().toUpperCase().indexOf(texto) > -1) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });          
+    }
+    else {
+        $(".card-anuncio").show()
+    }
+    
+});
+

@@ -160,11 +160,53 @@
 					<h1 class="title-section">Anúncios</h1>
 
 					<div class="row search-anuncios">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="material-icons">search</i>
-							</span>
-							<div class="form-group is-empty"><input type="text" class="form-control search-card" placeholder="Busque uma empresa"><span class="material-input"></span></div>
+						<div class="col-md-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="material-icons">search</i>
+								</span>
+								<div class="form-group is-empty"><input type="text" class="form-control search-card" placeholder="Busque uma empresa"><span class="material-input"></span></div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+								<select class="form-group browser-default" id="searchCategoria">
+									<option value="TODAS" selected>Todas</option>
+									<option value="BARESRESTAURANTES">Bares e restaurantes</option>
+									<option value="MODA">Moda</option>
+									<option value="CASACARNES">Casa de carnes</option>
+									<option value="SUPERMERCADOS">Supermercados</option>
+									<option value="PADARIA">Padaria</option>
+									<option value="IMOBILIARIA">Imobiliária</option>
+									<option value="OFICINA">Oficina mecânica</option>
+									<option value="INFORMATICA">Informática e celulares</option>
+									<option value="FARMACIA">Farmácia</option>
+									<option value="SORVETERIA">Sorveteria</option>
+									<option value="UTILIDADES">Utilidades</option>
+									<option value="PETSHOP">Pet shop</option>
+									<option value="CLINICAS">Clínicas</option>
+									<option value="POSTOCOMBUSTIVEL">Posto de combustível</option>
+									<option value="MATERIALCONSTRUCAO">Material de construção </option>
+									<option value="ACADEMIA">Academia</option>
+									<option value="CARTORIO">Cartório</option>
+									<option value="BANCO">Agência bancária </option>
+									<option value="CORREIO">Correio</option>
+									<option value="LOTERICA">Lotérica</option>
+									<option value="SERVICOS">Serviços</option>
+									<option value="FESTAS">Festas</option>
+									<option value="BICICLETARIO">Bicicletário</option>
+									<option value="CENTROAUTOMOTIVO">Centro automotivo</option>
+									<option value="PAPELARIA">Papelaria</option>
+									<option value="LOCADORA">Locadora</option>
+									<option value="BELEZA">Beleza e estética</option>
+									<option value="ENSINO">Ensino</option>
+									<option value="SERRALHERIA">Serralheria</option>
+									<option value="MOVEIS">Móveis</option>
+									<option value="PUBLICO">Órgão público</option>
+									<option value="TURISMO">Turismo</option>
+									<option value="TRANSPORTE">Transporte escolar</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</header>
@@ -186,6 +228,7 @@
 							<div class="caption">
 								<div class="titulo-anuncio">
 									<h4><?= $empresa['nome']?></h4>
+									<input id="categoriaEmpresaSelect" type="hidden" value="<?= $empresa['categoria']?>"/>
 								</div>
 
 								<div class="descricao-anuncio">
