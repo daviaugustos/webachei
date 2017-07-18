@@ -80,6 +80,9 @@
 															<option <?php echo ($empresa['categoria'] == 'CASACARNES' ? ' selected="selected"' : ''); ?>  value="CASACARNES">Casa de carnes</option>
 															<option <?php echo ($empresa['categoria'] == 'SUPERMERCADOS' ? ' selected="selected"' : ''); ?> value="SUPERMERCADOS">Supermercados</option>
 															<option <?php echo ($empresa['categoria'] == 'PADARIA' ? ' selected="selected"' : ''); ?> value="PADARIA">Padaria</option>
+															<option <?php echo ($empresa['categoria'] == 'IMOBILIARIA' ? ' selected="selected"' : ''); ?> value="IMOBILIARIA">Imobiliária</option>
+															<option <?php echo ($empresa['categoria'] == 'OFICINA' ? ' selected="selected"' : ''); ?> value="OFICINA">Oficina mecânica</option>
+															<option <?php echo ($empresa['categoria'] == 'INFORMATICA' ? ' selected="selected"' : ''); ?> value="INFORMATICA">Informática e celulares</option>
 														</select>
 													</div>
 												</div>

@@ -95,6 +95,9 @@
 															<option value="CASACARNES">Casa de carnes</option>
 															<option value="SUPERMERCADOS">Supermercados</option>
 															<option value="PADARIA">Padaria</option>
+															<option value="IMOBILIARIA">Imobiliária</option>
+															<option value="OFICINA">Oficina mecânica</option>
+															<option value="INFORMATICA">Informática e celulares</option>
 														</select>
 													</div>
 												</div>
