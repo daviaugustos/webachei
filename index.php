@@ -154,11 +154,28 @@
 					<h1 class="title-section">Anúncios</h1>
 
 					<div class="row search-anuncios">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="material-icons">search</i>
-							</span>
-							<div class="form-group is-empty"><input type="text" class="form-control search-card" placeholder="Busque uma empresa"><span class="material-input"></span></div>
+						<div class="col-md-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="material-icons">search</i>
+								</span>
+								<div class="form-group is-empty"><input type="text" class="form-control search-card" placeholder="Busque uma empresa"><span class="material-input"></span></div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+								<select class="form-group browser-default" id="searchCategoria">
+									<option value="TODAS" selected>Todas</option>
+									<option value="BARESRESTAURANTES">Bares e restaurantes</option>
+									<option value="MODA">Moda</option>
+									<option value="CASACARNES">Casa de carnes</option>
+									<option value="SUPERMERCADOS">Supermercados</option>
+									<option value="PADARIA">Padaria</option>
+									<option value="IMOBILIARIA">Imobiliária</option>
+									<option value="OFICINA">Oficina mecânica</option>
+									<option value="INFORMATICA">Informática e celulares</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</header>
@@ -180,6 +197,7 @@
 							<div class="caption">
 								<div class="titulo-anuncio">
 									<h4><?= $empresa['nome']?></h4>
+									<input id="categoriaEmpresaSelect" type="hidden" value="<?= $empresa['categoria']?>"/>
 								</div>
 
 								<div class="descricao-anuncio">
