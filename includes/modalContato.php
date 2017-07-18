@@ -26,7 +26,7 @@
 							<textarea name"txtDescricao" rows="5" cols="50" class="form-control"></textarea>
 						</div>
 						<div class="footer text-center">
-							<button type="submit" class="color-blue btn btn-simple btn-lg">Enviar</button>
+							<button type="submit" class="color-purple btn btn-simple btn-lg">Enviar</button>
 						</div>
 					</form>
 				</div>

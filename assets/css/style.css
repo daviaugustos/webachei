@@ -2,6 +2,9 @@
 .bg-blue{
     background-color: #2980b1;
 }
+.bg-purple{
+  background: linear-gradient(60deg, #ab47bc, #8e24aa);
+}
 .bg-yellow{
   background-color: #fdeb4e;
 }
@@ -12,7 +15,10 @@
     background-color: #fff;
 }
 .color-red{
-    color: #3eb986 !important;
+    color: #F44336 !important;
+}
+.color-purple{
+    color: #ab47bc !important;
 }
 .color-blue{
     color: #2980b1 !important;
@@ -30,7 +36,8 @@ button:hover, button:active, button:focus{
     outline:none;
 }
 .card .header-primary {
-    background: linear-gradient(60deg, #236d96, #239496);
+   /*background: linear-gradient(60deg, #f74f43, #de483d);*/
+   background: linear-gradient(60deg, #ab47bc, #8e24aa);
 }
 .title-section{
   font-size: 2.6em !important;
@@ -454,7 +461,7 @@ select:focus {
     padding-bottom: 15px;
 }
 .thumbnail .icon-anuncio i{
-   color: #3eb986;
+   color: #ab47bc;
    vertical-align: bottom;
 }
 .icon-anuncio span, .icon-anuncio a{
@@ -524,11 +531,11 @@ body.login{
   padding-bottom: 40px; 
 }
 .informacoes .icon-anuncio i{
-  color: #3eb986;
+  color: #ab47bc;
   vertical-align: bottom;
 }
 .informacoes .icon-anuncio svg{
-  color: #3eb986;
+  color: #ab47bc;
   vertical-align: bottom;
 }
 .informacoes .icon-anuncio span{
@@ -604,7 +611,7 @@ body.login{
 
   margin-top: 10px;
   cursor: pointer;
-  background: #42add8;
+  background: #ab47bc;
   color: white;
 
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -628,7 +635,7 @@ body.login{
   box-shadow: none;
 }
 #carousel .title-slide{
-  color:#236d96;
+  color:#ab47bc;
   font-size: 32px;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.42857143;
@@ -765,6 +772,11 @@ span.banner.delete:hover{
   max-width:initial !important;
 }
 
+.logo img{
+  width: 180px !important;
+  vertical-align: middle;
+  padding-top: 0.5em;
+}
 
 /*-- Footer --*/
 footer ul li a{
@@ -813,6 +825,11 @@ footer p{
     #anuncios .img-anuncio{
       height: 250px;
     }
+    .logo img{
+      width: 170px !important;
+      vertical-align: middle;
+      padding-left: 0.8em;
+    }
 }
 
 @media only screen and (max-width : 620px) {
@@ -835,6 +852,12 @@ footer p{
 }*/
 
 @media only screen and (max-width : 500px) {
+    .logo img{
+      width: 130px !important;
+      vertical-align: middle;
+      padding-top: 1em;
+      padding-left: 0.5em;
+    }
     .col-xx-12{
         width: 100%;
     }

@@ -46,7 +46,7 @@
 	<header>
 		<h1 class="font-zero">Webachei - Empresas de sua cidade aqui!</h1>
 		<!-- Navbar -->
-		<div class="navbar navbar-fixed-top bg-blue">
+		<div class="navbar navbar-fixed-top bg-purple">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -55,7 +55,13 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php">Webachei</a>
+					<a href="index.php">
+						<div class="logo-container">
+							<div class="logo">
+								<img src="assets/img/logo.png" alt="Webachei" rel="tooltip" title="" data-placement="bottom" data-html="true">
+							</div>
+						</div>
+					</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="navigation-index">

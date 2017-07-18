@@ -53,7 +53,7 @@
                     </div>
                   
                   <div class="footer text-center">
-                    <button type="submit" class="color-blue btn btn-simple btn-lg">Login</button>
+                    <button type="submit" class="color-purple btn btn-simple btn-lg">Login</button>
                   </div>
                 </form>
               </div>
@@ -65,7 +65,7 @@
           <div class="row footer-login">
             <div class="col-md-offset-3 col-md-6 col-md-offset-3">
               <div class="pull-left">
-                <a href="../index.php">Página do Site.</a>
+                <a class="color-purple" href="../index.php">Página do Site.</a>
               </div>
               <div class="pull-right">
                  <text>Webachei v1.0</text>
