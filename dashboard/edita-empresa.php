@@ -83,6 +83,31 @@
 															<option <?php echo ($empresa['categoria'] == 'IMOBILIARIA' ? ' selected="selected"' : ''); ?> value="IMOBILIARIA">Imobiliária</option>
 															<option <?php echo ($empresa['categoria'] == 'OFICINA' ? ' selected="selected"' : ''); ?> value="OFICINA">Oficina mecânica</option>
 															<option <?php echo ($empresa['categoria'] == 'INFORMATICA' ? ' selected="selected"' : ''); ?> value="INFORMATICA">Informática e celulares</option>
+															<option <?php echo ($empresa['categoria'] == 'SORVETERIA' ? ' selected="selected"' : ''); ?>  value="SORVETERIA">Sorveteria</option>
+															<option <?php echo ($empresa['categoria'] == 'FARMACIA' ? ' selected="selected"' : ''); ?>  value="FARMACIA">Farmácia</option>
+															<option <?php echo ($empresa['categoria'] == 'UTILIDADES' ? ' selected="selected"' : ''); ?>  value="UTILIDADES">Utilidades</option>
+															<option <?php echo ($empresa['categoria'] == 'PETSHOP' ? ' selected="selected"' : ''); ?>  value="PETSHOP">Pet shop</option>
+															<option <?php echo ($empresa['categoria'] == 'CLINICAS' ? ' selected="selected"' : ''); ?>  value="CLINICAS">Clínicas</option>
+															<option <?php echo ($empresa['categoria'] == 'POSTOCOMBUSTIVEL' ? ' selected="selected"' : ''); ?>  value="POSTOCOMBUSTIVEL">Posto de combustível</option>
+															<option <?php echo ($empresa['categoria'] == 'MATERIALCONSTRUCAO' ? ' selected="selected"' : ''); ?>  value="MATERIALCONSTRUCAO">Material de construção </option>
+															<option <?php echo ($empresa['categoria'] == 'ACADEMIA' ? ' selected="selected"' : ''); ?>  value="ACADEMIA">Academia</option>
+															<option <?php echo ($empresa['categoria'] == 'CARTORIO' ? ' selected="selected"' : ''); ?>  value="CARTORIO">Cartório</option>
+															<option <?php echo ($empresa['categoria'] == 'BANCO' ? ' selected="selected"' : ''); ?>  value="BANCO">Agência bancária </option>
+															<option <?php echo ($empresa['categoria'] == 'CORREIO' ? ' selected="selected"' : ''); ?>  value="CORREIO">Correio</option>
+															<option <?php echo ($empresa['categoria'] == 'LOTERICA' ? ' selected="selected"' : ''); ?>  value="LOTERICA">Lotérica</option>
+															<option <?php echo ($empresa['categoria'] == 'SERVICOS' ? ' selected="selected"' : ''); ?>  value="SERVICOS">Serviços</option>
+															<option <?php echo ($empresa['categoria'] == 'FESTAS' ? ' selected="selected"' : ''); ?>  value="FESTAS">Festas</option>
+															<option <?php echo ($empresa['categoria'] == 'BICICLETARIO' ? ' selected="selected"' : ''); ?>  value="BICICLETARIO">Bicicletário</option>
+															<option <?php echo ($empresa['categoria'] == 'CENTROAUTOMOTIVO' ? ' selected="selected"' : ''); ?>  value="CENTROAUTOMOTIVO">Centro automotivo</option>
+															<option <?php echo ($empresa['categoria'] == 'PAPELARIA' ? ' selected="selected"' : ''); ?>  value="PAPELARIA">Papelaria</option>
+															<option <?php echo ($empresa['categoria'] == 'LOCADORA' ? ' selected="selected"' : ''); ?>  value="LOCADORA">Locadora</option>
+															<option <?php echo ($empresa['categoria'] == 'BELEZA' ? ' selected="selected"' : ''); ?>  value="BELEZA">Beleza e estética</option>
+															<option <?php echo ($empresa['categoria'] == 'ENSINO' ? ' selected="selected"' : ''); ?>  value="ENSINO">Ensino</option>
+															<option <?php echo ($empresa['categoria'] == 'SERRALHERIA' ? ' selected="selected"' : ''); ?>  value="SERRALHERIA">Serralheria</option>
+															<option <?php echo ($empresa['categoria'] == 'MOVEIS' ? ' selected="selected"' : ''); ?>  value="MOVEIS">Móveis</option>
+															<option <?php echo ($empresa['categoria'] == 'PUBLICO' ? ' selected="selected"' : ''); ?>  value="PUBLICO">Órgão público</option>
+															<option <?php echo ($empresa['categoria'] == 'TURISMO' ? ' selected="selected"' : ''); ?>  value="TURISMO">Turismo</option>
+															<option <?php echo ($empresa['categoria'] == 'TRANSPORTE' ? ' selected="selected"' : ''); ?>  value="TRANSPORTE">Transporte escolar</option>
 														</select>
 													</div>
 												</div>

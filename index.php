@@ -174,6 +174,31 @@
 									<option value="IMOBILIARIA">Imobiliária</option>
 									<option value="OFICINA">Oficina mecânica</option>
 									<option value="INFORMATICA">Informática e celulares</option>
+									<option value="FARMACIA">Farmácia</option>
+									<option value="SORVETERIA">Sorveteria</option>
+									<option value="UTILIDADES">Utilidades</option>
+									<option value="PETSHOP">Pet shop</option>
+									<option value="CLINICAS">Clínicas</option>
+									<option value="POSTOCOMBUSTIVEL">Posto de combustível</option>
+									<option value="MATERIALCONSTRUCAO">Material de construção </option>
+									<option value="ACADEMIA">Academia</option>
+									<option value="CARTORIO">Cartório</option>
+									<option value="BANCO">Agência bancária </option>
+									<option value="CORREIO">Correio</option>
+									<option value="LOTERICA">Lotérica</option>
+									<option value="SERVICOS">Serviços</option>
+									<option value="FESTAS">Festas</option>
+									<option value="BICICLETARIO">Bicicletário</option>
+									<option value="CENTROAUTOMOTIVO">Centro automotivo</option>
+									<option value="PAPELARIA">Papelaria</option>
+									<option value="LOCADORA">Locadora</option>
+									<option value="BELEZA">Beleza e estética</option>
+									<option value="ENSINO">Ensino</option>
+									<option value="SERRALHERIA">Serralheria</option>
+									<option value="MOVEIS">Móveis</option>
+									<option value="PUBLICO">Órgão público</option>
+									<option value="TURISMO">Turismo</option>
+									<option value="TRANSPORTE">Transporte escolar</option>
 								</select>
 							</div>
 						</div>
