@@ -27,7 +27,7 @@
 					<a href="#" target="_blank" data-toggle="modal" data-target="#contatoModal">Contato</a>
 				</li>
 				<li>
-					<a rel="tooltip" title="Curta no Facebook" data-placement="bottom" href="http://facebook.com/" target="_blank"
+					<a rel="tooltip" title="Curta no Facebook" data-placement="bottom" href="https://www.facebook.com/WEB-ACHEI-669052169953044/" target="_blank"
 						class="btn btn-white btn-simple btn-just-icon">
 						<i class="fa fa-facebook-square"></i>
 					</a>
