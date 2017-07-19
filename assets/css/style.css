@@ -480,8 +480,10 @@ select:focus {
 .search-anuncios .input-group{
     width: 100% !important;
 }
-input.form-control, .form-group .form-control {
-    background-size: 0 3px, 100% 4px;
+.form-control.search-card {
+    margin-top: 7px;
+    padding-bottom: 20px;
+    background-size: 0 3px, 100% 4px !important;
 }
 
 /*-- Contatos --*/
@@ -900,7 +902,7 @@ footer p{
 
 
 
-/*teste*/
+/*personalização - Select Categorias*/
 select.select-style {
     -moz-appearance: none;
 		-webkit-appearance: none;
@@ -915,39 +917,41 @@ select.select-style {
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
-
+    color: #a945bb !important; 
     height: 2.75em;
+    font-size: 1.1em;
 }
 select.select-style:invalid {
-			box-shadow: none;
-		}
+  box-shadow: none;
+}
 .select-wrapper {
-		text-decoration: none;
-		display: block;
-		position: relative;
-	}
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
 .select-wrapper:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+}
 
-		.select-wrapper:before {
-			content: '\f078';
-			display: block;
-			height: 2.75em;
-			line-height: 2.75em;
-			pointer-events: none;
-			position: absolute;
-			right: 0;
-			text-align: center;
-			top: 0;
-			width: 2.75em;
-		}
+.select-wrapper:before {
+  content: '\f078';
+  display: block;
+  height: 2.75em;
+  line-height: 3em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 2.75em;
+  color: #a945bb;
+}
 
-		.select-wrapper select.select-style::-ms-expand {
-			display: none;
-		}
+.select-wrapper select.select-style::-ms-expand {
+  display: none;
+}
