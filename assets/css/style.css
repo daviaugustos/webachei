@@ -480,7 +480,9 @@ select:focus {
 .search-anuncios .input-group{
     width: 100% !important;
 }
-
+input.form-control, .form-group .form-control {
+    background-size: 0 3px, 100% 4px;
+}
 
 /*-- Contatos --*/
 #contatoModal textarea{
@@ -891,3 +893,61 @@ footer p{
     }
     
 }
+
+
+
+
+
+
+
+/*teste*/
+select.select-style {
+    -moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		border: none;
+		border: solid 3px;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+		width: 100%;
+
+    height: 2.75em;
+}
+select.select-style:invalid {
+			box-shadow: none;
+		}
+.select-wrapper {
+		text-decoration: none;
+		display: block;
+		position: relative;
+	}
+.select-wrapper:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.select-wrapper:before {
+			content: '\f078';
+			display: block;
+			height: 2.75em;
+			line-height: 2.75em;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 2.75em;
+		}
+
+		.select-wrapper select.select-style::-ms-expand {
+			display: none;
+		}

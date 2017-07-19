@@ -169,7 +169,112 @@
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="input-group">
+							<div class="form-group">
+
+
+
+
+					<div class="select-wrapper">
+						<select class="select-style" id="searchCategoria" name="categoriaEmpresa">
+							<option disabled selected>Categorias</option>
+							<option value="TODAS">Todas</option>
+							<option value="BARESRESTAURANTES">Bares e restaurantes</option>
+							<option value="MODA">Moda</option>
+							<option value="CASACARNES">Casa de carnes</option>
+							<option value="SUPERMERCADOS">Supermercados</option>
+							<option value="PADARIA">Padaria</option>
+							<option value="IMOBILIARIA">Imobiliária</option>
+							<option value="OFICINA">Oficina mecânica</option>
+							<option value="INFORMATICA">Informática e celulares</option>
+							<option value="FARMACIA">Farmácia</option>
+							<option value="SORVETERIA">Sorveteria</option>
+							<option value="UTILIDADES">Utilidades</option>
+							<option value="PETSHOP">Pet shop</option>
+							<option value="CLINICAS">Clínicas</option>
+							<option value="POSTOCOMBUSTIVEL">Posto de combustível</option>
+							<option value="MATERIALCONSTRUCAO">Material de construção </option>
+							<option value="ACADEMIA">Academia</option>
+							<option value="CARTORIO">Cartório</option>
+							<option value="BANCO">Agência bancária </option>
+							<option value="CORREIO">Correio</option>
+							<option value="LOTERICA">Lotérica</option>
+							<option value="SERVICOS">Serviços</option>
+							<option value="FESTAS">Festas</option>
+							<option value="BICICLETARIO">Bicicletário</option>
+							<option value="CENTROAUTOMOTIVO">Centro automotivo</option>
+							<option value="PAPELARIA">Papelaria</option>
+							<option value="LOCADORA">Locadora</option>
+							<option value="BELEZA">Beleza e estética</option>
+							<option value="ENSINO">Ensino</option>
+							<option value="SERRALHERIA">Serralheria</option>
+							<option value="MOVEIS">Móveis</option>
+							<option value="PUBLICO">Órgão público</option>
+							<option value="TURISMO">Turismo</option>
+							<option value="TRANSPORTE">Transporte escolar</option>
+						</select>
+					</div>
+
+
+
+
+
+
+
+
+<!--<div class="mdl-selectfield">
+														<select required="" class="form-control browser-default" name="categoriaEmpresa">
+															<option value="" disabled="" selected="">Categoria</option>
+															<option value="BARESRESTAURANTES">Bares e restaurantes</option>
+															<option value="MODA">Moda</option>
+															<option value="CASACARNES">Casa de carnes</option>
+															<option value="SUPERMERCADOS">Supermercados</option>
+															<option value="PADARIA">Padaria</option>
+															<option value="IMOBILIARIA">Imobiliária</option>
+															<option value="OFICINA">Oficina mecânica</option>
+															<option value="INFORMATICA">Informática e celulares</option>
+															<option value="FARMACIA">Farmácia</option>
+															<option value="SORVETERIA">Sorveteria</option>
+															<option value="UTILIDADES">Utilidades</option>
+															<option value="PETSHOP">Pet shop</option>
+															<option value="CLINICAS">Clínicas</option>
+															<option value="POSTOCOMBUSTIVEL">Posto de combustível</option>
+															<option value="MATERIALCONSTRUCAO">Material de construção </option>
+															<option value="ACADEMIA">Academia</option>
+															<option value="CARTORIO">Cartório</option>
+															<option value="BANCO">Agência bancária </option>
+															<option value="CORREIO">Correio</option>
+															<option value="LOTERICA">Lotérica</option>
+															<option value="SERVICOS">Serviços</option>
+															<option value="FESTAS">Festas</option>
+															<option value="BICICLETARIO">Bicicletário</option>
+															<option value="CENTROAUTOMOTIVO">Centro automotivo</option>
+															<option value="PAPELARIA">Papelaria</option>
+															<option value="LOCADORA">Locadora</option>
+															<option value="BELEZA">Beleza e estética</option>
+															<option value="ENSINO">Ensino</option>
+															<option value="SERRALHERIA">Serralheria</option>
+															<option value="MOVEIS">Móveis</option>
+															<option value="PUBLICO">Órgão público</option>
+															<option value="TURISMO">Turismo</option>
+															<option value="TRANSPORTE">Transporte escolar</option>
+														</select>
+													</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 								<select class="form-group browser-default" id="searchCategoria">
 									<option value="TODAS" selected>Todas</option>
 									<option value="BARESRESTAURANTES">Bares e restaurantes</option>
@@ -205,7 +310,7 @@
 									<option value="PUBLICO">Órgão público</option>
 									<option value="TURISMO">Turismo</option>
 									<option value="TRANSPORTE">Transporte escolar</option>
-								</select>
+								</select>-->
 							</div>
 						</div>
 					</div>
