@@ -68,7 +68,7 @@
                 <a class="color-purple" href="../index.php">Página do Site.</a>
               </div>
               <div class="pull-right">
-                 <text>Webachei v1.0</text>
+                 <text>Webachei v1.1</text>
               </div>
             </div>
           </div>
