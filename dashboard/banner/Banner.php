@@ -1,5 +1,13 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/webachei/dashboard/empresa/Imagem.php");
+
+     /*Pedaço de gambiarra*/
+    $raiz = $_SERVER['DOCUMENT_ROOT'];
+    if (substr($raiz,-6) == "htdocs"){
+        $raiz = $raiz ."/webachei/";
+    }
+    /*Pedaço de gambiarra*/
+
+    require_once($raiz . "/dashboard/empresa/Imagem.php");
 
     class Banner Extends Imagem{
             public $empresaIdFk;
