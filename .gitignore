@@ -1,3 +1,4 @@
 # Ignorar imagens contidas na pasta de imagens
 imagens/
 conexao.php
+dashboard/empresa/Conexao.php
