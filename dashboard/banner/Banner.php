@@ -60,7 +60,6 @@
                 ));
                 return $retornoInsert;
             }
-            
 
             public function listaBanner($idBanner){
                 $query = "SELECT *

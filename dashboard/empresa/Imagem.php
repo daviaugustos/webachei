@@ -104,6 +104,14 @@
                 ];
             }
         }
+
+        public function deletaImagemBanner($caminhoImagem){
+            $raiz = $_SERVER['DOCUMENT_ROOT'];
+            if (substr($raiz,-6) == "htdocs"){
+                $raiz = $raiz ."/webachei/";
+            }
+            unlink($raiz . 'imagens/banners/' . $caminhoImagem);
+        }
     }
 
 ?>
