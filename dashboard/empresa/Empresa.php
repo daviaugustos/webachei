@@ -191,7 +191,12 @@
             } 
 
             public function atualizar($empresa){
-                
+
+                $verificaImagem = $this->verificaUpdateImagem();
+                if($verificaImagem){
+                    $this->atualizarImagemEmpresa($verificaImagem);
+                }
+
                 //Update tabela empresa
                 $statement =$empresa->conexao->prepare("UPDATE empresa SET
                                                         cnpj=:cnpj, nome=:nome, responsavel=:responsavel, status=:status, categoria=:categoria
@@ -232,7 +237,19 @@
                     ':empresaId' => $empresa->empresaId
                 ));
 
-            }      
+            }     
+            
+            public function atualizarImagemEmpresa($verificaImagem){
+                //Update tabela empresa
+                $statement =$this->conexao->prepare("UPDATE imagemEmpresa SET
+                                                        nomeImagem = :nomeImagem 
+                                                        WHERE empresaIdFk = :empresaIdFk");
+
+                $statement->execute(array(
+                ':nomeImagem' => $verificaImagem,
+                ':empresaIdFk' => $this->empresaId
+                ));
+            }
 
     }
 
