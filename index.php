@@ -380,6 +380,7 @@
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/material.min.js"></script>
 <script src="assets/js/jquery.mask.min.js"></script>
+<script src="assets/js/jquery.uploadPreview.min.js" type="text/javascript"></script>
 <script src="assets/js/custom.js"></script>
 
 

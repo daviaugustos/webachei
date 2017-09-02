@@ -24,6 +24,10 @@
     $empresa->facebookContato = $_POST["facebookContato"];
     $empresa->descricaoEmpresa = $_POST["descricaoEmpresa"];
 
+    //Dados da imagem
+    $empresa->nomeImagemSalva = $_POST["nomeImagemSalva"];
+    $empresa->fileArray = $_FILES["imagemAtualizada"];
+
     $empresa->atualizar($empresa);
     header("Location: ../listagem-empresa.php");
 ?>

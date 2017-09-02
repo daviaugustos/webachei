@@ -5,6 +5,7 @@
         public  $fileArray;
         private $extensoesValidas = array('jpeg', 'jpg', 'png', 'gif', 'bmp'); 
         private $caminhoPadrao = '../../imagens/';
+        public $nomeImagemSalva;
 
         //Retorna boolean da validação
         public function verificarFileArray (){
@@ -103,6 +104,39 @@
                     "descricao" => "Erro ao recuperar imagem selecionada. Por favor tente novamente"
                 ];
             }
+        }
+
+        public function deletaImagemBanner($caminhoImagem){
+            $raiz = $_SERVER['DOCUMENT_ROOT'];
+            if (substr($raiz,-6) == "htdocs"){
+                $raiz = $raiz ."/webachei/";
+            }
+            unlink($raiz . 'imagens/banners/' . $caminhoImagem);
+        }
+
+        public function deletaImagemEmpresa($nomeImagem){
+            $raiz = $_SERVER['DOCUMENT_ROOT'];
+            if (substr($raiz,-6) == "htdocs"){
+                $raiz = $raiz ."/webachei/";
+            }
+            $caminho = $raiz . '/imagens/' . $nomeImagem;
+            unlink($caminho);
+        }
+
+        public function verificaUpdateImagem(){
+            $nomeImagemSemHash = $this->removerHashImagem($this->nomeImagemSalva);
+            if(($nomeImagemSemHash != $this->fileArray['name'])&& ($this->fileArray['name'] != '')){
+                $resultadoUpload = $this->executarUpload();
+                if(!$resultadoUpload["erro"]){
+                    $this->deletaImagemEmpresa($this->nomeImagemSalva);
+                }
+                return $resultadoUpload["descricao"];
+            }
+            return false;
+        }
+
+        public function removerHashImagem($nomeImagem){
+            return substr($nomeImagem, 6);
         }
     }
 

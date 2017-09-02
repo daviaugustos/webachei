@@ -51,8 +51,9 @@
 	                            </div>
 	                            <div class="card-content">
 									<!-- Inicio do formulário -->
-	                                <form name="editaEmpresa" method="POST" action="empresa/atualiza-empresa.php">
+	                                <form enctype="multipart/form-data" name="editaEmpresa" method="POST" action="empresa/atualiza-empresa.php">
 										<input type="hidden" name="empresaId" value="<?= $empresa['empresaId'];?>">
+										<input type="hidden" name="nomeImagemSalva" value="<?= $empresa['nomeImagem'];?>">
 										<div class="row padding-top-10">
 										<!--Imagem/Logo/Banner -->
 											<div class="card-anuncio col-sm-12 col-md-12 col-xs-12 col-xx-12">
@@ -225,6 +226,28 @@
 												</div>
 											</div>
 										</div>
+
+										<!--Área destinada a imagem logo da empresa-->
+										<div class="row" style="min-height: 200px;">
+											<div class="col-md-12">
+												<div>
+													<label>Imagem/Banner/Logo</label>
+												</div>
+												<!--<label class="label-imagem" for="input-imagem" >
+													<i class="material-icons">cloud_upload</i>
+													<text>Carregar imagem</text>
+												</label>													
+												<input type="file" id="input-imagem" name="imagemAtualizada">
+												
+												<div class="info-imagem margin-top-20">
+													<p class="info-imagem-error">Nenhuma imagem foi selecionada</p>
+												</div>-->
+												<div id="image-preview">
+													<label for="image-upload" id="image-label">Carregar Imagem</label>
+													<input type="file" name="imagemAtualizada" id="image-upload" />
+												</div>
+											</div>
+	                                    </div>
 
 										<div class="center padding-top-20">
 											<button type="submit" class="btn btn-primary">Salvar</button>

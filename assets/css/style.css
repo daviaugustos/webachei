@@ -793,6 +793,46 @@ footer p{
   font-weight: 400;
 }
 
+/*-- Upload Preview --*/
+
+#image-preview {
+  width: auto;
+  height: 479px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  color: #fff;
+}
+#image-preview input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+#image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #9c27b0;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  line-height: 50px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
 /*-- Media Screens --*/
 
 /*Media Screens nos Banners*/
