@@ -3,6 +3,7 @@
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/material.min.js"></script>
 <script src="../assets/js/jquery.mask.min.js"></script>
+<script src="../assets/js/jquery.uploadPreview.min.js" type="text/javascript"></script>
 <script src="../assets/js/custom.js"></script>
 
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->

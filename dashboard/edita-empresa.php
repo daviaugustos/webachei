@@ -233,7 +233,7 @@
 												<div>
 													<label>Imagem/Banner/Logo</label>
 												</div>
-												<label class="label-imagem" for="input-imagem" >
+												<!--<label class="label-imagem" for="input-imagem" >
 													<i class="material-icons">cloud_upload</i>
 													<text>Carregar imagem</text>
 												</label>													
@@ -241,6 +241,10 @@
 												
 												<div class="info-imagem margin-top-20">
 													<p class="info-imagem-error">Nenhuma imagem foi selecionada</p>
+												</div>-->
+												<div id="image-preview">
+													<label for="image-upload" id="image-label">Carregar Imagem</label>
+													<input type="file" name="imagemAtualizada" id="image-upload" />
 												</div>
 											</div>
 	                                    </div>
