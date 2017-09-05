@@ -433,6 +433,9 @@ select:focus {
     font-weight: 400;
     padding-left: 0;
     font-size: 14px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .thumbnail .titulo-anuncio h4{
     color: #4c4c4c;
